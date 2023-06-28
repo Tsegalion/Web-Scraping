@@ -1,3 +1,3 @@
 # Web-Scraping
 
-The idea was to extract negative reviews on Uber's service on trustpilot to help create a compettitive product design for competitors.
+This repository is dedicated to showcase my web scraping projects.
