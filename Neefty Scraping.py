@@ -1,6 +1,5 @@
 from selenium import webdriver
 import time
-import pandas as pd
 from bs4 import BeautifulSoup
 
 driver = webdriver.Chrome(r"C:\Users\Tsega\Downloads\chromedriver_win32\chromedriver.exe")
@@ -47,12 +46,7 @@ for page in range(1, num_pages + 1):
         NFT.append(Non)
 
     # Click the "Next" button
-    next_button = driver.find_element_by_xpath('//button[contains(text(), "arrow_forward_ios")]')
+    next_button = driver.find_element_by_xpath('//button[contains(text(), "arro_forward_ios")]')
     next_button.click()
 
 driver.quit()
-
-df = pd.DataFrame(NFT)
-df
-
-df.to_csv('nft.csv', index=False)
