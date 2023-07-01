@@ -1,6 +1,5 @@
 import requests
 from bs4 import BeautifulSoup
-import pandas as pd
 
 # Extract all links needed to be iterated
 links = []
@@ -74,8 +73,3 @@ for link in links:
         }
 
         rev.append(Uber)
-
-df  = pd.DataFrame(rev)
-df
-
-df.to_csv('Uberreview.csv', index=False)
