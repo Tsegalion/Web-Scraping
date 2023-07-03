@@ -1,18 +1,12 @@
 import requests
 from bs4 import BeautifulSoup
 
-# Extract all links needed to be iterated
 links = []
 for x in range(1,100):
-    # Send a GET request to the URL
     source = requests.get(f'https://www.trustpilot.com/review/www.uber.com?page={x}&stars=1').text
-
-    # Create a BeautifulSoup object with the response text
     soup = BeautifulSoup(source, 'lxml')
 
-    # Find all review items
     review_items = soup.find_all('div', class_='styles_consumerDetailsWrapper__p2wdr')
-
     for review in review_items:
         for link in review.find_all('a', href=True):
             href = link['href']
@@ -63,7 +57,6 @@ for link in links:
         except AttributeError:
             Reviewww = 'N/A'
 
-        # Print the details
         Uber = {
             'Name' : Name,
             'Date' : Date,
