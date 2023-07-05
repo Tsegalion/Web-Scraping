@@ -4,16 +4,15 @@ from bs4 import BeautifulSoup
 
 driver = webdriver.Chrome(r"C:\Users\Tsega\Downloads\chromedriver_win32\chromedriver.exe")
 
-base_url = "https://neefty.io/xrpl?cid=63fea0117ecc1a23708fd704"
+base_url = driver.get("https://neefty.io/xrpl?cid=63fea0117ecc1a23708fd704")
 
 NFT = []
 
 # Define the number of pages to scrape
 num_pages = 144
-driver.get(base_url)
 time.sleep(5)
 
-for page in range(1, num_pages + 1):
+for page in range(1, num_pages + ):
     # Load the page
 
     # Scroll to the bottom of the page to load all the content
